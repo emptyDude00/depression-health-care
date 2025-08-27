@@ -1,0 +1,52 @@
+
+/* ====== Depression Mental Health - Global Styles ====== */
+:root{
+  --bg:#0f172a;          /* slate-900 */
+  --panel:#111827;       /* gray-900 */
+  --text:#e5e7eb;        /* gray-200 */
+  --muted:#9ca3af;       /* gray-400 */
+  --brand:#38bdf8;       /* sky-400 */
+  --accent:#a78bfa;      /* violet-400 */
+  --success:#10b981;     /* emerald-500 */
+  --danger:#ef4444;      /* red-500 */
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b1220 0%, #111827 100%);color:var(--text);font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji";}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:0 1rem}
+.navbar{position:sticky;top:0;z-index:50;background:rgba(17,24,39,.85);backdrop-filter:blur(8px);border-bottom:1px solid rgba(148,163,184,.15)}
+.navbar .inner{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
+.brand{display:flex;gap:.6rem;align-items:center;font-weight:700;letter-spacing:.2px}
+.brand .logo{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 30% 30%,var(--brand),var(--accent));box-shadow:0 0 24px rgba(56,189,248,.35)}
+.nav-links{display:flex;gap:1rem;flex-wrap:wrap}
+.nav-links a{padding:.45rem .7rem;border-radius:999px}
+.nav-links a:hover{background:rgba(148,163,184,.12)}
+.mobile-toggle{display:none;background:none;border:0;color:var(--text);font-size:1.25rem}
+.hero{padding:64px 0 40px;border-bottom:1px solid rgba(148,163,184,.1)}
+.hero .lead{color:var(--muted);max-width:680px}
+.badge{display:inline-flex;align-items:center;gap:.4rem;border:1px solid rgba(148,163,184,.25);border-radius:999px;padding:.25rem .6rem;color:var(--muted);font-size:.875rem}
+.grid{display:grid;gap:1rem}
+.cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin:28px 0}
+.card{background:linear-gradient(180deg,rgba(2,6,23,.6),rgba(17,24,39,.8));border:1px solid rgba(148,163,184,.12);border-radius:18px;padding:1rem;box-shadow:0 12px 30px rgba(2,6,23,.35)}
+.card h3{margin:.2rem 0 .4rem}
+.card p{color:var(--muted)}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem .9rem;border-radius:12px;border:1px solid rgba(148,163,184,.2);background:rgba(148,163,184,.08);color:var(--text);font-weight:600}
+.btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(56,189,248,.15)}
+.btn.primary{background:radial-gradient(circle at 20% 20%,var(--brand),var(--accent));border-color:transparent}
+.section{padding:42px 0;border-top:1px solid rgba(148,163,184,.08)}
+.kpi{display:flex;gap:1rem;flex-wrap:wrap}
+.kpi .pill{background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.35);color:#e6f6ff;padding:.5rem .8rem;border-radius:999px}
+.footer{padding:26px 0;color:var(--muted);border-top:1px solid rgba(148,163,184,.1);margin-top:28px}
+.input, textarea, select{width:100%;padding:.7rem .8rem;border-radius:12px;border:1px solid rgba(148,163,184,.25);background:#0b1220;color:var(--text);}
+label{font-weight:600;margin:.6rem 0 .25rem;display:block}
+form .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.notice{background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.35);padding:.75rem 1rem;border-radius:12px;color:#d1fae5;margin:1rem 0}
+.price{font-size:1.15rem;font-weight:700;color:#e0e7ff}
+.hero-figure{margin-top:1rem;display:grid;grid-template-columns:1fr;gap:.75rem}
+.hero-figure img{width:100%;height:220px;object-fit:cover;border-radius:14px;border:1px solid rgba(148,163,184,.15)}
+@media (max-width: 800px){
+  .nav-links{display:none}
+  .mobile-toggle{display:inline-flex}
+}
